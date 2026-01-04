@@ -14,7 +14,15 @@ HashTable* ht_create(size_t size)
 	return ht;
 }
 
-uint64_t hash(void* key, size_t keylen);
+uint64_t hash(void* key, size_t keylen)
+{
+	uint64_t hash = 5381;
+
+	for(int i = 0; i < keylen; i++)
+	{
+		hash = hash * 33 + 
+	}
+}
 Entry* ht_lookup(HashTable* ht, void* key, size_t keylen);
 uint8_t ht_insert(HashTable* ht, void* key, size_t keylen, void* value, size_t valuelen);
 uint8_t ht_remove(HashTable* ht, void* key, size_t keylen);
